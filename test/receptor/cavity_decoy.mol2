@@ -1,0 +1,9 @@
+@<TRIPOS>MOLECULE
+cavity_decoy.pdb
+ 1 0 0 0 0
+SMALL
+GASTEIGER
+
+@<TRIPOS>ATOM
+      1  C          2.8350    0.4750   -0.4820 C.3     1  UNK1        0.0000
+@<TRIPOS>BOND

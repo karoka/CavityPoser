@@ -1,0 +1,2 @@
+0,1,2,3,4,5,pred_MLP,pred_XGB,pred_RF
+receptor.pdb,decoy,2.91465,1,UNK,C,1.0,0.886,0.705
