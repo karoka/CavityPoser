@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# module load rdock openbabel mmtsb charmm/c44a1/env_intel_2019 gcc > /dev/null
+
 if [[ $# -lt 1 ]]
 then
 	echo "Path to pdb file required."
@@ -33,6 +36,7 @@ featurizerBin=${7:-$DIRBIN/featurize}
 
 
 featureFile=$workingDIR/features.csv
+cavityFile=$workingDIR/cavity_centers.txt
 if [[ $scalar == 1 ]]
 then
 	model=${DIRMODEL}/models.pkl
@@ -93,7 +97,7 @@ then
 		sed -i 'N;N;s/\n/ /g' features_decoy.txt
 	fi
 	paste <(awk -v model=${cavityID} -v x=${cavx} -v y=${cavy} -v z=${cavz} -v rna=${rna} '{print rna, model, sqrt(($2-x)*($2-x)+($3-y)*($3-y)+($4-z)*($4-z))}' cavity_centers.txt) <(cat raw_feature.txt | grep -v 'atmid') | tee -a ${featureFile}
-	python ${predictPy} ${model} ${featureFile} ${outFile} ${scalar}
+	python ${predictPy} ${model} ${featureFile} ${cavityFile} ${outFile} ${scalar}
     # clean up
     rm cavity_decoy.xyz cavity_decoy.pdb cavities.out receptor.mol2
 fi

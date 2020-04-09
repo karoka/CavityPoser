@@ -37,7 +37,7 @@ The predicted cavities and their corresponding scores are written in file `recep
 
 #### Output
 ```
-PDB, cavityID, x, y, z, pred_MLP, pred_XGB, pred_RF
+PDB, tag, cavityID, x, y, z, pred_MLP, pred_XGB, pred_RF
 ```
 
 #### Optional Arguments
