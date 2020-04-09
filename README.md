@@ -36,9 +36,9 @@ cd test/
 The predicted cavities and their corresponding scores are written in file `receptor/predicted_pockets.txt`.
 
 #### Output
-```
-PDB, tag, cavityID, x, y, z, pred_MLP, pred_XGB, pred_RF
-```
+| pdb          | tag   | cavityID | x     | y     | z      | pred_MLP | pred_XGB | pred_RF |
+|--------------|-------|----------|-------|-------|--------|----------|----------|---------|
+| receptor.pdb | decoy | 1        | 2.835 | 0.475 | -0.482 | 1.000    | 0.886    | 0.705   |
 
 #### Optional Arguments
 ```

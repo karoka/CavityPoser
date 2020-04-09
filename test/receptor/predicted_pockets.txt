@@ -1,2 +1,2 @@
 pdb,tag,cavityID,x,y,z,pred_MLP,pred_XGB,pred_RF
-receptor.pdb,decoy,1,2.835,0.475,-0.48200000000000004,1.0,0.886,0.705
+receptor.pdb,decoy,1,2.835,0.475,-0.482,1.000,0.886,0.705
