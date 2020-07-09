@@ -52,6 +52,19 @@ It takes the following arguments:
 * `tag`: an arbitrary identifier of the structure. Default:   "decoy".
 * `output-file`: output file path and name.
 
+## Validate thesis results (Table 4.2)
+```
+cd training/
+```
+* Required python environment: pandas, scikit-learn, xgboost
+
+* Use pre-trained models: `python train.py 1`
+* Re-train models: `python train.py 0`
+* Get ranking table: `python get_rank 1` and `python get_rank 1`
+* Output: `results/rank_testset1.csv` and `results/rank_testset1.csv`
+
+
+
 ## Publications
 
 * `RNAPosers`(In revision): Chhabra, Sahil, Jingru Xie, and Aaron T. Frank. "RNAPosers: Machine Learning Classifiers For RNA-Ligand Poses." bioRxiv (2019): 702449.
